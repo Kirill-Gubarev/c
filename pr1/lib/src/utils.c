@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 void pause(){
-	myPrint("Press any key to continue...");
+	myPrint("Press enter to continue...");
     getchar();
     getchar();
 }

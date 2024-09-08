@@ -9,7 +9,7 @@ void myPrintInt(const char *text, int num);
 void myPrintFloat(const char *text, float num);
 void myPrintDouble(const char *text, double num);
 
-//scaners
+//scanners
 int myScanInt(const char *text);
 float myScanFloat(const char *text);
 double myScanDouble(const char *text);

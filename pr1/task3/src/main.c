@@ -1,8 +1,7 @@
+#include <float.h>
 #include <stdio.h>
 #include <limits.h>
-#include <float.h>
 #include <stdlib.h>
-
 int main(){
     //ввод
     char c;
