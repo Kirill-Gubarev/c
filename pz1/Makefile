@@ -1,24 +1,13 @@
 TARGET = build/app
-SRC = src
-LIB = lib
-OBJ = obj
-BUILD = build
 
-$(TARGET): $(OBJ)/main.o $(LIB)/build/libpoint.a
-	mkdir -p build
-	g++ -o $(TARGET) $(OBJ)/main.o $(LIB)/build/libpoint.a
+$(TARGET): dirs obj/main.o
+	gcc -o $(TARGET) obj/main.o
 
-$(OBJ)/main.o: $(OBJ) $(LIB)/src/include.h $(SRC)/main.c
-	gcc -o $(OBJ)/main.o -I$(LIB)/src/ -c $(SRC)/main.c 
+obj/main.o: src/main.c
+	gcc -o obj/main.o -c src/main.c
 
-$(OBJ):
-	mkdir -p $(OBJ)
-
-$(LIB)/build/libpoint.a:
-	"$(MAKE)" -C lib/
+dirs:
+	mkdir -p obj build
 
 clean:
-	rm -f $(BUILD)/* $(OBJ)/*
-
-cleanAll: clean
-	"$(MAKE)" -C lib/ cleanAll
+	rm -rf obj/* build/*
