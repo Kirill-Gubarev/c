@@ -4,6 +4,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <unistd.h>
 #include <locale.h>
 int main(int argc, char* argv[]){
     setlocale(LC_ALL, "ru_RU.UTF-8");

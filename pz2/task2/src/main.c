@@ -1,7 +1,7 @@
-#include <fcntl.h>	/* open() and O_XXX flags */
-#include <sys/stat.h>	/* S_IXXX flags */
-#include <sys/types.h>	/* mode_t */
-#include <unistd.h>	/* close() */
+#include <fcntl.h>	
+#include <sys/stat.h>
+#include <sys/types.h>	
+#include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -30,6 +30,6 @@ int main (int argc, char ** argv)
 		fprintf (stderr, "Cannot close file (descriptor=%d)\n", fd);
 		exit (1);
 	}	
-    getchar();
+    	getchar();
 	exit (0);
 }
