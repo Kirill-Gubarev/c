@@ -38,6 +38,11 @@ int readh(int fd, char* buf, int len){
 
 void printFile(int fd){
 	char buf[64];
-	while(readh(fd, buf, sizeof(buf)))
+	while(1){
+		int numberBytes = readh(fd, buf, sizeof(buf) - 1);
+		if(numberBytes == 0)
+			break;
+		buf[numberBytes] = '\0';
 		printf("%s", buf);
+	}
 }

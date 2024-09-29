@@ -32,7 +32,6 @@ int main(int argc, char* argv[]){
 
 		writeh(fd, buf, len);
 	}
-	writeh(fd, "\0", 1);
 	
 	printf("=== SEEK_SET 5 ===\n");
 	lseek(fd, 5, SEEK_SET);
